@@ -1,0 +1,138 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('Chargerules/index')}">普通充值规则列表</a></li>
+			<li class="active"><a >{:lang('EDIT')}普通充值规则</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('Chargerules/editPost')}">
+            <div class="form-group">
+				<label for="input-name" class="col-sm-2 control-label"><span class="form-required">*</span>中文名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name" name="name" value="{$data['name']}">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-name_en" class="col-sm-2 control-label"><span class="form-required">*</span>英文名称</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-name_en" name="name_en" value="{$data['name_en']}">
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-money" class="col-sm-2 control-label"><span class="form-required">*</span>价格</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-money" name="money" value="{$data['money']}">
+					<p class="help-block">价格在0.01-99999999之间</p>
+				</div>
+			</div>
+            
+            <div class="form-group">
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>{$name_coin}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-coin" name="coin" value="{$data['coin']}">
+					<p class="help-block">1-99999999之间</p>
+				</div>
+			</div>
+            
+            <if condition="$data['type'] eq '0'">
+	            <div class="form-group">
+					<label for="input-coin_ios" class="col-sm-2 control-label"><span class="form-required">*</span>苹果支付{$name_coin}</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-coin_ios" name="coin_ios" value="{$data['coin_ios']}">
+						<p class="help-block">1-99999999之间</p>
+					</div>
+				</div>
+            </if>
+            <div class="form-group">
+				<label for="input-product_id" class="col-sm-2 control-label"><span class="form-required">*</span>苹果项目ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-product_id" name="product_id" value="{$data['product_id']}">
+				</div>
+			</div>
+            
+            <if condition="$data['type'] eq '0'">
+	            <div class="form-group">
+					<label for="input-give" class="col-sm-2 control-label"><span class="form-required">*</span>赠送{$name_coin}</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-give" name="give" value="{$data['give']}">
+						<p class="help-block">0-99999999之间</p>
+					</div>
+				</div>
+            
+
+	            <div class="form-group">
+					<label for="input-coin_paypal" class="col-sm-2 control-label"><span class="form-required">*</span>PayPal支付{$configpub['name_coin']}</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-coin_paypal" name="coin_paypal" value="{$data['coin_paypal']}" onkeyup ="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+						<p class="help-block">1-99999999之间</p>
+					</div>
+				</div>
+			</if>
+
+			<if condition="$data['type'] eq '1'">
+				<div class="form-group">
+					<label for="input-score" class="col-sm-2 control-label"><span class="form-required">*</span>赠送{$name_score}</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-score" name="score" value="{$data['score']}">
+						<p class="help-block">0-99999999之间</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="input-vip_length" class="col-sm-2 control-label"><span class="form-required">*</span>赠送VIP时长(天)</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-vip_length" name="vip_length" value="{$data['vip_length']}">
+						<p class="help-block">0-99999999之间</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+                    <label for="input-giftid" class="col-sm-2 control-label"><span class="form-required">*</span>赠送的热门礼物</label>
+                    <div class="col-md-6 col-sm-10">
+                        <select class="form-control" name="giftid">
+                        	<option value="0" <if condition="$data['giftid'] eq '0'">selected</if>>--不选择--</option>
+                        	<volist name="hotGiftLists" id="vo">
+                            	<option value="{$vo['id']}" <if condition="$vo['id'] eq $data['giftid']">selected</if>>{$vo['giftname']}</option>
+                            </volist>
+                        </select>
+                        <p class="help-block">请先确保直播管理-->礼物管理中添加了热门礼物</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+					<label for="input-gift_num" class="col-sm-2 control-label"><span class="form-required">*</span>赠送的热门礼物个数</label>
+					<div class="col-md-6 col-sm-10">
+						<input type="text" class="form-control" id="input-gift_num" name="gift_num" value="{$data['gift_num']}">
+						<p class="help-block">0-99999之间</p>
+					</div>
+				</div>
+
+			</if>
+
+            <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<input type="hidden" name="type" value="{$data.type}" />
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="javascript:history.back(-1);">{:lang('BACK')}</a>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("select[name='giftid']").change(function(){
+				var val=$(this).val();
+				if(val==0){
+					$("input[name='gift_num']").val("0");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

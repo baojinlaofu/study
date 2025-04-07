@@ -1,0 +1,12 @@
+2024-12-06 15:39:10|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/xiangqu8.com/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/xiangqu8.com/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/xiangqu8.com/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/xiangqu8.com/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/xiangqu8.com/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/xiangqu8.com/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/xiangqu8.com/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/xiangqu8.com/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/xiangqu8.com/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}

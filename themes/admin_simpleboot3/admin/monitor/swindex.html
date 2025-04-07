@@ -1,0 +1,223 @@
+<include file="public@header" />
+<style type="text/css">
+    .ban_area{
+        padding: 10px 20px;
+    }
+
+    .ban_area p{
+        padding-left: 10%;
+        width: 50%;
+        float: left;
+    }
+
+    .clearboth{
+        clear: both;
+    }
+
+    .ban_btn_area{
+        text-align: center;
+    }
+
+    .ban_btn_area input{
+        margin-top: 15px;
+        width: 40px;
+        height: 25px;
+    }
+</style>
+</head>
+<body>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/home/js/socket.io.js"></script>
+    <script src="__STATIC__/js/layer/layer.js"></script>
+    
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >监控</a></li>
+		</ul>
+		<form method="post" class="js-ajax-form" >
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>主播ID</th>
+                        <th>主播昵称</th>
+                        <th>直播ID</th>
+                        <th>开播时间</th>
+                        <th>直播时长</th>
+                        <th>直播类型</th>
+                        <th>直播分类</th>
+                        <th>房间类型</th>
+                        <th>密码/价格</th>
+                        <th>横竖屏</th>
+                        <th>聊天室类型</th>
+                        <th align="center">{:lang('ACTIONS')}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <foreach name="lists" item="vo">
+                    <tr>
+                        <td>{$vo.uid}</td>
+                        <td>{$vo['userinfo']['user_nickname']} </td>
+                        <td>{$vo['showid']}</td>
+                        <td>{:date('Y-m-d H:i',$vo['starttime'])}</td>
+                        <td>{$vo['live_length']}</td>
+                        <td><if condition="$vo['live_type'] eq 0">视频直播<else/>聊天室</if></td>
+                        <td>{$vo['liveclassname']}</td>
+                        <td>{$type[$vo['type']]}</td>
+                        <td>{$vo['type_val']}</td>
+                        <td><if condition="$vo['anyway'] eq 0">竖屏<else/>横屏</if></td>
+                        <td><if condition="$vo['live_type'] eq 0">---<else/><if condition="$vo['voice_type'] eq 0">语音<else/>视频</if></if></td>
+                        <td>
+                            <a class="btn btn-xs btn-info view" data-uid="{$vo['uid']}" data-anyway="{$vo['anyway']}" data-livetype="{$vo['live_type']}">查看
+                            <if condition="$vo['live_type'] eq 0">视频直播<else/>聊天室</if>
+                            </a>
+                            <a onclick="closeRoom('{$vo['uid']}')" class="btn btn-xs btn-warning">关闭</a>
+                            <a onclick="warning('<?php echo $vo['uid'];?>')" class="btn btn-xs btn-warning">警告</a>
+                            <a onclick="banRoom('<?php echo $vo['uid'];?>')" class="btn btn-xs btn-warning">封禁</a>
+                        </td>
+                    </tr>
+                    </foreach>
+                </tbody>
+            </table>
+
+		</form>
+        <div style="clear:both;"></div>
+        <div class="pagination"  style="clear:both">{$page}</div>
+	</div>
+
+    <script type="text/javascript">
+        var socket = new io("{$config['chatserver']}");
+
+        function closeRoom(roomId){
+            var data2 = {"token":"1234567","roomnum":roomId};
+            $.ajax({
+                async: false,
+                url: '/admin/Monitor/stopRoom',
+                data:{uid:roomId},
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                    if(data.status ==0){
+                        alert(data.info);
+                    }else{
+                        socket.emit("superadminaction",data2);
+                        alert("房间已关闭");
+                        location.reload();
+                    }
+                },
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    alert('关闭失败，请重试');
+                }
+            });
+        }
+
+        function warning(roomId){
+            var data2 = {"token":"1234567","roomnum":roomId};
+            socket.emit("warning",data2);
+            layer.msg('直播间'+roomId+'警告成功');
+        }
+
+        var ban_length='30min';
+
+        function banRoom(roomId){
+
+            layer.open({
+              type: 1,
+              title:'房间'+roomId+'封禁时间',
+              skin: 'layui-layer-rim', //加上边框
+              area: ['420px', '280px'], //宽高
+              content: '<div class="ban_area">\
+                            <p><label><input name="length" type="radio" checked="true" value="30min" onclick="changeBanLength(\'30min\')"/> 30分钟</label></p>\
+                            <p><label><input name="length" type="radio" value="1day" onclick="changeBanLength(\'1day\')"/> 1天</label></p>\
+                            <p><label><input name="length" type="radio" value="7day" onclick="changeBanLength(\'7day\')"/> 7天</label></p>\
+                            <p><label><input name="length" type="radio" value="15day onclick="changeBanLength(\'15day\')""/> 15天</label></p>\
+                            <p><label><input name="length" type="radio" value="30day" onclick="changeBanLength(\'30day\')"/> 30天</label></p>\
+                            <p><label><input name="length" type="radio" value="90day" onclick="changeBanLength(\'90day\')"/> 90天</label></p>\
+                            <p><label><input name="length" type="radio" value="180day" onclick="changeBanLength(\'180day\')"/> 180天</label></p>\
+                            <p><label><input name="length" type="radio" value="all" onclick="changeBanLength(\'all\')"/> 永久</label></p>\
+                            <div class="clearboth"></div>\
+                            <div class="ban_btn_area">\
+                                <input type="button" onclick="banRoomSubmit('+roomId+')" value="封禁" />\
+                            </div>\
+                        </div>'
+            });
+        }
+
+        function changeBanLength(val){
+            ban_length=val;
+            layer.msg(ban_length);
+        }
+
+        function banRoomSubmit(roomId){
+            var data2 = {"token":"1234567","roomnum":roomId};
+            //询问框
+            layer.confirm('确定将该直播间封禁吗?', {
+              btn: ['确定','取消'] //按钮
+            }, function(){
+               
+              $.ajax({
+                'type':'post',
+                'url':'/admin/Monitor/banRoom',
+                'data':{roomid:roomId,length:ban_length},
+                'dataType':'json',
+                'success':function(data){
+                    var code=data.code;
+                    var msg=data.msg;
+                    if(code!=0){
+                        layer.msg(msg);
+                        return;
+                    }
+
+                    layer.msg(msg,{time:1000},function(){
+                        layer.closeAll();
+                        socket.emit("superadminaction",data2);
+                        location.reload();
+                    });
+                    
+                    return;
+                },
+                'error':function(e){
+                    layer.msg('封禁失败,请重试');
+                    reutrn;
+                }
+              });
+            }, function(){
+              layer.close(layer.index);
+            });
+        }
+
+        $('.view').click(function(){
+                var _this=$(this);
+                var uid=_this.data('uid');
+                var anyway=_this.data('anyway');
+                var livetype=_this.data('livetype');
+                var width='0px',height='0px';
+                //竖
+                if(anyway==0){
+                    width='500px';
+                    height='840px';
+                }else{
+                    width='700px';
+                    height='550px';
+                }
+
+                var title;
+
+                if(livetype==0){
+                    title="查看视频直播";
+                }else{
+                    title="查看聊天室";
+                }
+
+                layer.open({
+                    type: 2,
+                    title: title,
+                    shadeClose: false,
+                    shade: 0.8,
+                    area: [width, height],
+                    content: '/admin/Monitor/play?uid='+uid
+                }); 
+                
+            });
+    </script>
+</body>
+</html>

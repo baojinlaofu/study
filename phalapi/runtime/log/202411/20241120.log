@@ -1,0 +1,60 @@
+2024-11-20 16:05:58|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-20 16:05:59|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-20 16:05:59|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-20 16:05:59|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-20 19:28:01|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}

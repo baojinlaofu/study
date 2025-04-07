@@ -1,0 +1,12 @@
+[2024-11-02T15:20:08+08:00][sql] CONNECT:[ UseTime:0.002236s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-02T15:20:08+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.002641s ]
+[2024-11-02T15:20:08+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.001129s ]
+[2024-11-02T15:20:08+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.001304s ]
+[2024-11-02T15:20:08+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000869s ]
+[2024-11-02T15:20:08+08:00][error] [0]WRONGPASS invalid username-password pair or user is disabled.[/www/wwwroot/yuliao.012539.cn/app/redis.php:11]
+[2024-11-02T15:20:08+08:00][sql] CONNECT:[ UseTime:0.002237s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-02T15:20:08+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.002548s ]
+[2024-11-02T15:20:08+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.001259s ]
+[2024-11-02T15:20:08+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.001225s ]
+[2024-11-02T15:20:08+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.001178s ]
+[2024-11-02T15:20:08+08:00][error] [0]WRONGPASS invalid username-password pair or user is disabled.[/www/wwwroot/yuliao.012539.cn/app/redis.php:11]

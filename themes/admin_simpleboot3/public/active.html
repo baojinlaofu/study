@@ -1,0 +1,48 @@
+<!-- 页面中间双十一弹窗 -->
+<style type="text/css">
+    .active_alert{
+        width: 600px;
+        position: fixed; 
+        left: 27%;
+        top:30%;
+        z-index: 99999;
+        display: none;
+    }
+
+    .active_alert .active_alert_img{
+        width: 100%;
+        height: auto;
+    }
+
+    .active_alert .active_alert_close{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        cursor: pointer;
+    }
+
+</style>
+<div class="active_alert">
+    <img class="active_alert_close" src="__STATIC__/images/close.png">
+    <img class="active_alert_img" src="/upload/active_alert.png">
+</div>
+
+<!-- 页面中间双十一弹窗 -->
+
+
+<!-- <script type="text/javascript">
+    $(function(){
+        
+        //页面中间双十一弹窗显示
+        setTimeout(function(){
+            $(".active_alert").show();
+        },3000);
+
+        //页面中间双十一弹窗关闭
+        $(".active_alert_close").on('click',function(){
+            $(".active_alert").hide();
+        });
+    });
+</script> -->

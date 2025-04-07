@@ -1,0 +1,120 @@
+<include file="public@header" />
+<style type="text/css">
+    .woring{
+        text-align: center;
+        margin-top: 100px;
+        font-weight: bold;
+        color: red;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+    <form id="join-form" style="display:none;">
+        <input id="appid" type="text" value="{$sw_appid}" />
+        <input id="token" type="text" value="{$sw_rtc_token}" />
+        <input id="channel" type="text" value="{$stream}" />
+        <input id="uid" type="text" value="{$current_uid}" />
+        <input id="linkmic_token" type="text" value="{$sw_rtc_linkmic_token}" />
+        <input id="linkmic_channel" type="text" value="{$linkmic_stream}" />
+    </form>
+	<div class="wrap">
+        <if condition="$islive eq 0">
+            <div class="woring">主播已关播</div>
+        <else />
+        <div class="form-group">
+            <div class="col-md-6 col-sm-10">
+                <div id="area-video">
+                <div class="playerzmblbkjP" id="playerzmblbkjP"></div>
+                </div>
+            </div>
+        </div>
+        </if>
+	</div>
+    <if condition="$islive eq 1">
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/js/jquery.form.min.js"></script>
+    <script src="__STATIC__/js/AgoraRTC_N-4.20.0.js?t=1617781898"></script>
+    <script src="__STATIC__/admin/js/agora.js?t=1617781914"></script>
+    <script type="text/javascript">
+        var avatar='{$avatar}';
+        var anyway={$anyway};
+        var _DATA = {};
+        _DATA.live={$liveinfoj};
+        _DATA.linkmic_uid={$linkmic_uid};
+
+        $(function(){
+            if(anyway==0){
+                $("#area-video").height('735');
+            }else{
+                $("#area-video").height('400');
+            }
+            
+            //声网
+            AgoraRTC.onAutoplayFailed = () => {
+
+              layer.msg('画面加载完成', {
+                time:false,
+                  btn: ['好的','关闭']
+              });
+            };
+
+            //主播未与其他主播连麦
+            if(_DATA.live.pkuid==0){
+
+                $("#join-form").ajaxSubmit(async function(){
+
+                  try {
+                    sw_client = AgoraRTC.createClient({
+                      mode: "rtc",
+                      codec: "vp8"
+                    });
+                    sw_options.channel = $("#channel").val();
+                    sw_options.uid = Number($("#uid").val());
+                    sw_options.appid = $("#appid").val();
+                    sw_options.token = $("#token").val();
+                    join();
+                    
+                  } catch (error) {
+                    console.error(error);
+                  }
+                
+                });
+
+            }else{
+
+                $("#join-form").ajaxSubmit(async function(){
+                    try {
+                        sw_client = AgoraRTC.createClient({
+                          mode: "rtc",
+                          codec: "vp8"
+                        });
+                        sw_options.channel = $("#channel").val();
+                        sw_options.uid = Number($("#uid").val());
+                        sw_options.appid = $("#appid").val();
+                        sw_options.token = $("#token").val();
+
+                        sw_linkmic_client = AgoraRTC.createClient({
+                          mode: "rtc",
+                          codec: "vp8"
+                        });
+
+                        sw_linkmic_options.channel = $("#linkmic_channel").val();
+                        sw_linkmic_options.uid = Number($("#uid").val());
+                        sw_linkmic_options.appid = $("#appid").val();
+                        sw_linkmic_options.token = $("#linkmic_token").val();
+                        
+                        await Promise.all([join(), join2()]);
+                        
+                    } catch (error) {
+                        console.error(error);
+                    }
+                });
+            }
+
+            
+        });
+    </script>
+    </if>
+</body>
+</html>

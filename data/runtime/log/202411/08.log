@@ -1,0 +1,36 @@
+[2024-11-08T05:37:00+08:00][sql] CONNECT:[ UseTime:0.000464s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T05:37:00+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000719s ]
+[2024-11-08T05:37:00+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000403s ]
+[2024-11-08T05:37:00+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000492s ]
+[2024-11-08T05:37:00+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000438s ]
+[2024-11-08T05:37:00+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]
+[2024-11-08T05:37:00+08:00][sql] CONNECT:[ UseTime:0.000458s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T05:37:00+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000672s ]
+[2024-11-08T05:37:00+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000394s ]
+[2024-11-08T05:37:00+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000492s ]
+[2024-11-08T05:37:00+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000437s ]
+[2024-11-08T05:37:00+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]
+[2024-11-08T05:37:06+08:00][sql] CONNECT:[ UseTime:0.000327s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T05:37:06+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000538s ]
+[2024-11-08T05:37:06+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000348s ]
+[2024-11-08T05:37:06+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000475s ]
+[2024-11-08T05:37:06+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000409s ]
+[2024-11-08T05:37:06+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]
+[2024-11-08T09:57:49+08:00][sql] CONNECT:[ UseTime:0.000445s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T09:57:49+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000701s ]
+[2024-11-08T09:57:49+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000424s ]
+[2024-11-08T09:57:49+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000486s ]
+[2024-11-08T09:57:49+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000438s ]
+[2024-11-08T09:57:49+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]
+[2024-11-08T11:05:49+08:00][sql] CONNECT:[ UseTime:0.000519s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T11:05:49+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000703s ]
+[2024-11-08T11:05:49+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000424s ]
+[2024-11-08T11:05:49+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000489s ]
+[2024-11-08T11:05:49+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000438s ]
+[2024-11-08T11:05:49+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]
+[2024-11-08T22:57:37+08:00][sql] CONNECT:[ UseTime:0.000518s ] mysql:host=43.241.16.146;port=3306;dbname=zhibo;charset=utf8mb4
+[2024-11-08T22:57:37+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook` [ RunTime:0.000660s ]
+[2024-11-08T22:57:37+08:00][sql] SELECT `hook`,`id` FROM `cmf_hook` WHERE  (  (  `app` = '' OR `app` = 'cmf' )  AND `type` = 3 ) OR `type` = 1 [ RunTime:0.000406s ]
+[2024-11-08T22:57:37+08:00][sql] SHOW FULL COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000446s ]
+[2024-11-08T22:57:37+08:00][sql] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1  AND `hook` IN ('app_begin','module_init','action_begin','view_filter','app_end','log_write','response_end','admin_init','home_init','send_mobile_verification_code','body_start','before_head_end','footer_start','before_footer','before_footer_end','before_body_end','left_sidebar_start','before_left_sidebar_end','right_sidebar_start','before_right_sidebar_end','comment','guestbook','switch_theme','after_content','before_content','log_write_done','switch_admin_theme','captcha_image') ORDER BY `list_order` ASC [ RunTime:0.000433s ]
+[2024-11-08T22:57:37+08:00][error] [0]Connection refused[/www/wwwroot/yuliao.012539.cn/app/redis.php:10]

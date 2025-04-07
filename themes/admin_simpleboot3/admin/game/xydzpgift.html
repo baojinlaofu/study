@@ -1,0 +1,63 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >幸运大转盘奖品列表</a></li>
+		</ul>
+        
+    
+		<form method="post" class="js-ajax-form" action="{:url('Game/xydzplistOrder')}">
+			<div class="table-actions">
+                <button class="btn btn-primary btn-sm js-ajax-submit" type="submit">{:lang('SORT')}</button>
+            </div>
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>排序</th>
+						<th>ID</th>
+						<th>奖品类型</th>
+						<th>奖品名称</th>
+						<th>奖品价值({$name_coin})</th>
+						<th>礼物数量</th>
+						<th>展示中奖概率</th>
+						<th>实际中奖概率--单击</th>
+						<th>实际中奖概率--10连击</th>
+						<th>实际中奖概率--100连击</th>
+						<th>添加时间</th>
+                        <th>修改时间</th>
+						<th align="center">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="list" item="vo">
+					<tr>
+						<td><input name="list_orders[{$vo.id}]" class="input-order" type="text" value="{$vo.list_order}"></td>
+						<td>{$vo['id']}</td>
+						<td>{$type[$vo['type']]}</td>
+						<td><if condition="$vo['type'] eq 0">{$name_coin}<else />{$vo['giftinfo']['giftname']}</if></td>						
+						<td><if condition="$vo['type'] eq 0">{$vo['coin']}<else />{$vo['giftinfo']['needcoin']}</if></td>
+						<td>{$vo['gift_num']}</td>
+						<td>{$vo['show_win_prob']} %</td>
+						<td>{$vo['real_win_one']} %</td>
+						<td>{$vo['real_win_ten']} %</td>
+						<td>{$vo['real_win_hundred']} %</td>
+                        <td>{:date('Y-m-d H:i:s',$vo['addtime'])}</td>
+                        <td><if condition="$vo['edittime'] gt 0">{:date('Y-m-d H:i:s',$vo['edittime'])}<else />--</if></td>
+                        
+						<td>
+							
+							<a class="btn btn-xs btn-primary" href='{:url("Game/xydzpedit",array("id"=>$vo["id"]))}'>{:lang('EDIT')}</a>
+                           
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+			<div class="pagination">{$page}</div>
+
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+
+<include file="public@head"/>
+<title>{$configpub.site_seo_title|default=$site_name}</title>
+<meta name="keywords" content="{$configpub.site_seo_keywords}"/>
+<meta name="description" content="{$configpub.site_seo_description}"/>
+<link type="text/css" rel="stylesheet" href="__STATIC__/js/swiper/swiper.min.css"/>
+<link type="text/css" rel="stylesheet" href="__STATIC__/home/css/index.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <include file="public@header"/>
+	<div class="top_line"></div>
+	
+	<div class="index_live">
+		<div class="scroll_top">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <volist name='slide' id='vo'>
+                    <div class="swiper-slide">
+                        <a target="_blank" href="{$vo.url}">
+                            <img src="{$vo.image}">
+                        </a>
+                    </div>
+                    </volist>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>       	
+    	</div>	
+	</div>
+    	
+	<div class="index-com-box">
+        <div class="container">
+            <h3 class="index-com-title">享趣APP特色</h3>
+            <p class="index-com-descption">多重加密技术，保障用户隐私安全。</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico1.png" class="center-block" />
+                            <h5>智能推荐</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>根据用户喜好精准推送内容。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico2.png" class="center-block" />
+                            <h5>个性定制</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>界面风格、内容板块，随心所欲设置。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico3.png" class="center-block" />
+                            <h5>语音识别</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>高效语音交互，解放双手操作。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico4.png" class="center-block" />
+                            <h5>数据分析</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>深度挖掘数据，提供个性化建议。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico5.png" class="center-block" />
+                            <h5>跨平台同步</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>无缝衔接，多设备间数据共享。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="index-item23">
+                        <div class="t-top">
+                            <img src="http://www.bootfastui.cn/img/2020/0425-2/ico6.png" class="center-block" />
+                            <h5>安全防护</h5>
+                        </div>
+                        <div class="t-footer">
+                            <p>多重加密技术，保障用户隐私安全。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	<include file="home/index@centerbanner"/>  
+	<div class="auto-box">
+		<div class="main-box">
+			<div class="index-tit">
+				<h1>精益求精的360°服务</h1>
+				<p>近20年 IT 服务经验，千锤百炼打造面向企业的全程服务</p>
+			</div>
+			<ul class="index-tserver">
+				<li class="tserver-list1">
+					专业教程
+					<p class="animated zoomin">
+						<a href="#">内置详细教程，轻松学习新技能。</a>
+					</p>
+				</li>
+				<li class="tserver-list2">
+					新手服务
+					<p class="animated zoomin">
+						<a href="#">提供云端架构、部署、产品和功能培训和指导</a>
+					</p>
+				</li>
+				<li class="tserver-list3">
+					网络安全服务
+					<p class="animated zoomin">
+						<a href="#">提供漏扫、态势感知、安全加固等全面网络安全防护服务</a>
+					</p>
+				</li>
+				<li class="tserver-list4">
+					资质服务
+					<p class="animated zoomin">
+						<a href="#">致力于为客户的应用提供更加安全防护与合规保障</a>
+					</p>
+				</li>
+				<li class="tserver-list5">
+					应用服务
+					<p class="animated zoomin">
+						<a href="#">提供面向应用的系统运维服务</a>
+					</p>
+				</li>
+				<li class="tserver-list6">
+					快速更新
+					<p class="animated zoomin">
+						<a href="#">紧跟科技前沿，每日更新最新资讯</a>
+					</p>
+				</li>
+				<li class="tserver-list7">
+					夜间模式
+					<p class="animated zoomin">
+						<a href="#">保护视力，夜间阅读更舒适。</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="index-tserver-ad">
+			<div class="main-box">
+				<ul>
+					<li><img src="http://www.bootfastui.cn/img/2020/200424-4/tserver-ad-icon1.png">7*24*365 服务支持</li>
+					<li><img src="http://www.bootfastui.cn/img/2020/200424-4/tserver-ad-icon2.png">灵活定制行业解决方案</li>
+					<li><img src="http://www.bootfastui.cn/img/2020/200424-4/tserver-ad-icon3.png">秒级快速响应</li>
+					<li><img src="http://www.bootfastui.cn/img/2020/200424-4/tserver-ad-icon4.png">VVIP 大客户服务</li>
+					<li><img src="http://www.bootfastui.cn/img/2020/200424-4/tserver-ad-icon5.png">资深隐私保护</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+<include file="public@footer"/>
+<include file="public@scripts"/>
+
+<div class="fix_area">
+	<div class="fix_area_left fl">
+		<div class="fix_area_left_con">
+			<p>扫一扫</p>
+			<p>手机看</p>
+			<p class="ewm_img"><img src="{:get_upload_path($configpub['apk_ewm'])}"></p>
+			<p class="app_ewm_name">Android APP</p>
+		</div>
+	</div>
+	<div class="fix_area_right fl">
+		<p class="app_type_icon app_type_android mar_top75">
+			<img src="__STATIC__/home/images/index/az.png">
+		</p>
+		<p class="app_type_icon app_type_apple">
+			<img src="__STATIC__/home/images/index/pg1.png">
+		</p>
+		<p class="go_top">
+			<img src="__STATIC__/home/images/index/zhiding.png">
+		</p>
+	</div>
+	<div class="clearboth"></div>
+</div>
+
+</div>
+<script type="text/javascript" src="__STATIC__/js/swiper/swiper.min.js"></script>  
+
+<script>
+$(function(){
+	//图片延迟加载
+	$("img.thumb").lazyload({effect: "fadeIn"});	
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        },
+        loop : true
+    });
+})
+function check() {
+	var userAgentInfo=navigator.userAgent;
+	var Agents =new Array("Android","iPhone","SymbianOS","Windows Phone","iPad","iPod");
+	var flag=true;
+	for(var v=0;v<Agents.length;v++) {
+		if(userAgentInfo.indexOf(Agents[v])>0) {
+			flag=false;
+			break;
+		}
+	}
+	return flag;
+}
+if(!check()){
+	window.location.href="/wxshare/share/index";
+}
+	
+</script>
+
+<!-- 视频播放start -->
+<script src="__STATIC__/xigua/xgplayer.js?t=1574906138" type="text/javascript"></script>
+<script src="__STATIC__/xigua/backups/xgplayer-flv.js.js" type="text/javascript"></script>
+<script src="__STATIC__/xigua/backups/xgplayer-hls.js.js" type="text/javascript"></script>
+<script src="__STATIC__/xigua/backups/player.js?t=1585644578" type="text/javascript"></script>
+
+<!-- 视频播放end -->
+<script type="text/javascript">
+	$(function(){
+		$(".index_live_area_right ul li").click(function(){
+			if($(this).hasClass("on")){
+				return;
+			}
+			$(this).siblings().removeClass("on");
+			$(this).addClass("on");
+            
+			var pull=$(this).attr("data-pull");
+            
+			$(".video_mask a").attr("href","/"+$(this).attr("data-uid"));
+			xgPlay('video_play',pull);
+		});
+        
+        var firstLive=$(".index_live_area_right ul li")[0];
+        if(firstLive){
+            firstLive.click();
+        }
+
+		$(".index_live_area_left").mouseover(function() {
+			$(".video_mask").show();
+		});
+		$(".index_live_area_left").mouseleave(function() {
+			$(".video_mask").hide();
+		});
+
+
+		var apk_ewm='{:get_upload_path($configpub['apk_ewm'])}';
+		var ios_ewm='{:get_upload_path($configpub['ipa_ewm'])}';
+
+		$(".app_type_apple").mouseover(function(){
+			$(this).find('img').attr("src","__STATIC__/home/images/index/pg.png");
+			$(".app_type_android").find('img').attr("src","__STATIC__/home/images/index/az1.png");
+			$(".ewm_img").find("img").attr("src",ios_ewm);
+			$(".app_ewm_name").text("iOS App");
+		});
+			
+		
+
+		$(".app_type_apple").mouseleave(function(){
+			$(this).find('img').attr("src","__STATIC__/home/images/index/pg1.png");
+			$(".app_type_android").find('img').attr("src","__STATIC__/home/images/index/az.png");
+			$(".ewm_img").find("img").attr("src",apk_ewm);
+			$(".app_ewm_name").text("Android App");
+		});
+
+		$(".go_top").mouseover(function() {
+			$(this).find("img").attr("src",'__STATIC__/home/images/index/zhiding1.png');
+		});
+		$(".go_top").mouseleave(function() {
+			$(this).find("img").attr("src",'__STATIC__/home/images/index/zhiding.png');
+		});
+		
+		$(".go_top").click(function(){
+			document.body.scrollTop = 0;
+    		document.documentElement.scrollTop = 0;
+		});
+
+		//点击分类
+		$(".home_live_class li").click(function(){
+			$(this).siblings().removeClass('current');
+			$(this).addClass('current');
+			var id=$(this).data("id");
+			$.ajax({
+				url:'/home/index/getClassLive',
+				data:{'id':id},
+				dataType:'json',
+				success:function(data){
+					console.log(data);
+					var code=data.code;
+					if(code !=0){
+						layer.msg(data.msg);
+						return;
+					}
+
+					var info=data.info;
+					console.log(info);
+					var string='';
+					for (var i = 0; i < info.length; i++) {
+
+						string+='<li class="feed live">';
+
+						string+='<a class="link" href="/'+info[i]['uid']+'" target="_blank">\
+							<img class="screenshot thumb" src="'+info[i]['thumb']+'" data-original="'+info[i]['thumb']+'"/>\
+							<div class="user">\
+								<div class="user_left fl"><img class="avatar thumb" src="'+info[i]['avatar']+'" data-original="'+info[i]['avatar']+'"/></div>\
+								<div class="user_right fl">\
+									<p class="username">'+info[i]['user_nickname']+'</p>\
+									<p class="bottom">\
+										<span class="type">'+info[i]['signature']+'</span>\
+										<span class="nums">'+info[i]['nums']+'</span>\
+									</p>\
+								</div>\
+							</div>\
+							</a></li>';
+
+
+
+
+
+
+
+					}
+
+
+					$("#focuspic ul").html(string);
+				},
+				error:function(){
+					layer.msg('获取失败');
+				}
+			});
+		});
+	});
+</script>
+</body>
+</html>

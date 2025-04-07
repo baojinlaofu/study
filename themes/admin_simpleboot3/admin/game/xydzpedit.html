@@ -1,0 +1,111 @@
+<include file="public@header" />
+<style type="text/css">
+	.qujian{
+		width: 270px;
+		display: inline;
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li ><a href="{:url('game/xydzpgift')}">幸运大转盘奖品列表</a></li>
+			<li class="active"><a >添加</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form margin-top-20" action="{:url('game/xydzpeditPost')}">
+
+
+			<div class="form-group">
+				<label for="input-type" class="col-sm-2 control-label"><span class="form-required">*</span>奖品类型</label>
+				<div class="col-md-6 col-sm-10" id="type">
+                    
+					<label class="radio-inline"><input type="radio" name="type" value="0" <if condition="$info['type'] eq 0"> checked </if>>{$name_coin}</label>
+					<label class="radio-inline"><input type="radio" name="type" value="1" <if condition="$info['type'] eq 1"> checked </if>>礼物</label>
+                    
+				</div>
+			</div>
+
+			<div class="form-group" id="coin_num_area" <if condition="$info['type'] eq 1">style="display:none;"</if>>
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>奖励{$name_coin}数量</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control" id="input-coin" name="coin" value="{$info['coin']}"  placeholder="请输入奖励数量" >
+				</div>
+			</div>
+
+			<div class="form-group" id="giftid_area" <if condition="$info['type'] eq 0">style="display:none;"</if> >
+				<label for="input-coin" class="col-sm-2 control-label"><span class="form-required">*</span>选择礼物</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="giftid">
+							<option value="0" <if condition="$info['giftid'] eq 0"> selected </if>>--请选择礼物--</option>
+		                	<volist name="giftlist" id="vo">
+		                    <option value="{$vo['id']}" <if condition="$info['giftid'] eq $vo['id']"> selected </if> >{$vo['giftname']}({$vo['needcoin']})</option>
+		                	</volist>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group" id="gift_num_area" <if condition="$info['type'] eq 0">style="display:none;"</if>>
+				<label for="input-gift_num" class="col-sm-2 control-label"><span class="form-required">*</span>礼物数量</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control" id="input-gift_num" name="gift_num" value="{$info['gift_num']}" placeholder="请输入奖励礼物数量" >
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-show_win_prob" class="col-sm-2 control-label"><span class="form-required">*</span>展示中奖概率区间值</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-show_win_prob" name="show_win_prob" value="{$info['show_win_prob']}" placeholder="用于规则说明里展示中奖概率">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-real_win_one" class="col-sm-2 control-label"><span class="form-required">*</span>单击实际中奖概率</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control qujian" id="input-real_win_one" name="real_win_one" value="{$info['real_win_one']}"> %
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-real_win_ten" class="col-sm-2 control-label"><span class="form-required">*</span>10连击实际中奖概率</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control qujian" id="input-real_win_ten" name="real_win_ten" value="{$info['real_win_ten']}"> %
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input-real_win_hundred" class="col-sm-2 control-label"><span class="form-required">*</span>100连击实际中奖概率</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="number" class="form-control qujian" id="input-real_win_hundred" name="real_win_hundred" value="{$info['real_win_hundred']}"> %
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="id" value="{$info['id']}">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+					<a class="btn btn-default" href="{:url('game/xydzpgift')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+            
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("input[name='type']").click(function(){
+				var value = $(this).val();
+				if(value==1){
+					$("#giftid_area").show();
+					$("#gift_num_area").show();
+					$("#coin_num_area").hide();
+				}else{
+					$("#giftid_area").hide();
+					$("#gift_num_area").hide();
+					$("input[name='gift_num']").val('0');
+					$("#coin_num_area").show();
+				}
+			});
+		});
+	</script>
+</body>
+</html>

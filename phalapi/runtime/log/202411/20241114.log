@@ -1,0 +1,126 @@
+2024-11-14 13:24:46|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:24:48|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:24:55|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:24:57|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:24:59|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:25:01|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 13:25:12|ERROR|App.Home.getNearby|PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION zhibo.getDistance does not exist in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php:237
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(237): PDO->prepare()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(923): NotORM_Result->query()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/notorm/src/NotORM/Result.php(1008): NotORM_Result->execute()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Model/Home.php(197): NotORM_Result->fetchAll()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Domain/Home.php(55): App\Model\Home->getNearby()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Home.php(537): App\Domain\Home->getNearby()
+#6 [internal function]: App\Api\Home->getNearby()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#8 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#9 {main}
+2024-11-14 15:13:56|ERROR|App.Upload.getCosInfo|InvalidArgumentException: Options access_key, secret_key and bucket required in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Client.php:59
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Qiniu.php(16): Qiniu\Client->__construct()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/qiniu/src/Lite.php(41): Qiniu\Qiniu::create()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/config/di.php(84): PhalApi\Qiniu\Lite->__construct()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(201): {closure}()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(147): PhalApi\DependenceInjection->initService()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(174): PhalApi\DependenceInjection->get()
+#6 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(103): PhalApi\DependenceInjection->__get()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(50): App\Api\Upload->getQiniuToken()
+#8 [internal function]: App\Api\Upload->getCosInfo()
+#9 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#10 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#11 {main}
+2024-11-14 15:14:02|ERROR|App.Upload.getCosInfo|InvalidArgumentException: Options access_key, secret_key and bucket required in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Client.php:59
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Qiniu.php(16): Qiniu\Client->__construct()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/qiniu/src/Lite.php(41): Qiniu\Qiniu::create()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/config/di.php(84): PhalApi\Qiniu\Lite->__construct()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(201): {closure}()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(147): PhalApi\DependenceInjection->initService()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(174): PhalApi\DependenceInjection->get()
+#6 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(103): PhalApi\DependenceInjection->__get()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(50): App\Api\Upload->getQiniuToken()
+#8 [internal function]: App\Api\Upload->getCosInfo()
+#9 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#10 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#11 {main}
+2024-11-14 15:14:04|ERROR|App.Upload.getCosInfo|InvalidArgumentException: Options access_key, secret_key and bucket required in /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Client.php:59
+Stack trace:
+#0 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/qiniu/qiniu/lib/Qiniu/Qiniu.php(16): Qiniu\Client->__construct()
+#1 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/qiniu/src/Lite.php(41): Qiniu\Qiniu::create()
+#2 /www/wwwroot/yuliao.012539.cn/phalapi/config/di.php(84): PhalApi\Qiniu\Lite->__construct()
+#3 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(201): {closure}()
+#4 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(147): PhalApi\DependenceInjection->initService()
+#5 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/DependenceInjection.php(174): PhalApi\DependenceInjection->get()
+#6 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(103): PhalApi\DependenceInjection->__get()
+#7 /www/wwwroot/yuliao.012539.cn/phalapi/src/app/Api/Upload.php(50): App\Api\Upload->getQiniuToken()
+#8 [internal function]: App\Api\Upload->getCosInfo()
+#9 /www/wwwroot/yuliao.012539.cn/phalapi/vendor/phalapi/kernal/src/PhalApi.php(53): call_user_func()
+#10 /www/wwwroot/yuliao.012539.cn/public/appapi/index.php(9): PhalApi\PhalApi->response()
+#11 {main}
